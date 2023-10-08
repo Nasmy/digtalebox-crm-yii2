@@ -1,0 +1,14 @@
+/web/index.php
+/web/assets
+/web/resources
+/composer.lock
+/web/uploads
+/web/index-test.php
+/config
+/protected/runtime
+/.idea
+/temp
+/*.zip
+/*.csv
+/web/Excel
+/vendor

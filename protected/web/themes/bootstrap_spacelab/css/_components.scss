@@ -1,0 +1,1218 @@
+.card{
+  .card-body{
+    .profile-pic{
+      width: 50px;
+      height: 50px;
+      @include border-radius(50px);
+    }
+    .profiles{
+      font-size: 20px;
+      margin-right: 10px;
+    }
+  }
+}
+
+.btn-group-toggle{
+  label{
+    &.active{
+      @include themify($themes) {
+        border-top: solid 1px themed('secondry-color');
+      }
+    }
+  }
+}
+
+label{
+  &.input-group-text{
+    font-size: 14px;
+  }
+}
+
+.nav-pills{
+  &>.nav-item{
+    &>.nav-link{
+      &.active{
+        background-color: transparent;
+        border-radius: 0;
+        @include themify($themes) {
+          background-color: #f5f5f5;
+          color: themed('primary-color');
+          border-bottom: 1px solid themed('primary-color');
+        }
+      }
+    }
+  }
+}
+
+.valueSlider{
+  @include border-radius(10px !important);
+  border: none;
+  background: #ebebeb;
+
+  .ui-corner-all{
+    @include border-radius(10px !important);
+    @include themify($themes) {
+      background: themed('secondry-color');
+      border: solid 1px themed('primary-color');
+    }
+  }
+}
+
+.bootstrap-datetimepicker-widget a[data-action]{
+  padding: 6px 0;
+  height: auto !important;
+  box-shadow: none;
+}
+
+
+.keyword-highlight{
+  font-size: 12px;
+  font-weight: normal;
+  @include themify($themes) {
+    background-color: themed('third-color');
+  }
+  padding: .15em .2em;
+}
+
+.profile-pic-lg{
+  img{
+    width: 40px !important;
+    height: 40px !important;
+  }
+}
+
+.resources{
+  .resource{
+    background-color: #fff;
+    margin-left: auto;
+    margin-right: auto;
+    text-decoration: none;
+    margin-bottom: 30px;
+
+    @include border-radius(5px);
+
+    &:hover{
+      .pic{
+        img{
+          @include drop-shadow(0px 3px 10px 0px rgba(0, 0, 0, 0.2));
+        }
+      }
+    }
+
+    .pic{
+      width: 200px;
+      height: 200px;
+      display: block;
+      text-align: center;
+      margin-left: auto;
+      margin-right: auto;
+
+      img{
+        max-width: 200px;
+        height: 200px;
+        width: 200px;
+        @include drop-shadow(0px 2px 5px 0px rgba(0, 0, 0, 0.3));
+      }
+    }
+
+    .title{
+      margin-top: 20px;
+      font-size: 16px;
+      font-weight: bold;
+    }
+    .created-by{
+      font-size: 10px;
+      margin-bottom: 10px;
+      margin-top: 5px;
+    }
+    .status{
+      margin-bottom: 10px;
+    }
+    .actions{
+      a{
+        margin-left: 5px;
+        margin-right: 5px;
+      }
+    }
+
+  }
+}
+
+/* AB Testing */
+.campaigns{
+  img{
+    &.img-thumbnail{
+      width: 100%;
+      max-width: 115px;
+      max-height: 115px;
+    }
+  }
+
+  #user-count-a, #user-count-b{
+    text-align: center;
+  }
+}
+
+/* Email Campaigns */
+.bg-not-opened{
+  background-color: $cam-sent;
+  color:#fff;
+}
+.bg-clicked{
+  background-color: $cam-clicked;
+  color:#fff;
+}
+.bg-opened{
+  background-color: $cam-opened;
+  color:#fff;
+}
+.bg-bounced{
+  background-color: $cam-bounced;
+  color:#fff;
+}
+.bg-blocked{
+  background-color: $cam-blocked;
+  color:#fff;
+}
+.bg-spam{
+  background-color: $cam-spam;
+  color:#fff;
+}
+.bg-failed{
+  background-color: $cam-failed;
+  color:#fff;
+}
+.bg-unsubs{
+  background-color: $cam-unsubs;
+  color: #fff;
+}
+
+.progress-keys{
+  margin-right: 20px;
+  float: left;
+  span{
+    .badge{
+      margin-left: 10px;
+      color: #fff;
+    }
+  }
+}
+
+/* Form Builder */
+iframe{
+  &.form-preview{
+    height: 100%;
+    min-height: 450px;
+    border: solid 1px #e9e9e9;
+  }
+}
+.add-form-payments{
+  display: none;
+}
+
+
+/*   New Campaign Stepper   */
+
+.campaign-outer{
+  overflow: hidden;
+
+  .stepper-wrap{
+    position: relative;
+    width: 100%;
+    text-align: center;
+    min-height: 130px;
+
+    .step-wizard{
+      display: inline-block;
+      position: relative;
+      width: 100%;
+
+      .progress {
+        position: absolute;
+        top: 17px;
+        left: 12.5%;
+        width: 75%;
+        height: 6px;
+
+        @media (min-width: 576px) {
+          top: 23px;
+        }
+      }
+      .progressbar {
+        position: absolute;
+        @include themify($themes) {
+          background-color: themed('secondry-color');
+        }
+        opacity: 0.5;
+        height: 6px;
+        border: 1px solid #e5e6e6;
+        width: 0%;
+        -webkit-transition: width 0.6s ease;
+        -o-transition: width 0.6s ease;
+        transition: width 0.6s ease;
+        &.empty {
+          opacity: 1;
+          width: 100%;
+          background-color: #e5e6e6;
+        }
+      }
+      .stepper{
+        position: absolute;
+        width: 100%;
+        list-style: none;
+        padding: 0;
+        li{
+          display: inline-block;
+          text-align: center;
+          width: 22.5%;
+
+          &:last-child{
+            width: 70px;
+          }
+
+          @media (min-width: 576px) {
+            width: 24.7%;
+          }
+
+          a{
+            text-align: center;
+            display: block;
+            width: 50px;
+            text-decoration: none;
+            @media (min-width: 576px) {
+              width: 70px;
+            }
+
+            .step{
+              width: 40px;
+              height: 40px;
+              margin-left: auto;
+              margin-right: auto;
+              display: block;
+              line-height: 40px;
+              text-align: center;
+              @include border-radius(30px);
+              @include themify($themes) {
+                background-color: themed('primary-light');
+              }
+              @media (min-width: 576px) {
+                width: 50px;
+                height: 50px;
+                line-height: 50px;
+              }
+
+              i{
+                color: #ffffff;
+              }
+            }
+            .title{
+              @include themify($themes) {
+                color: themed('primary-light');
+              }
+            }
+          }
+
+          &.active{
+            a{
+              .step{
+                @include themify($themes) {
+                  background-color: themed('secondry-color');
+                }
+                -webkit-transition: 1s ease;
+                -o-transition: 1s ease;
+                transition: 1s ease;
+
+              }
+              .title{
+                @include themify($themes) {
+                  color: themed('secondry-color');
+                }
+                -webkit-transition: 1s ease;
+                -o-transition: 1s ease;
+                transition: 1s ease;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .campaign-slides{
+    /*.owl-stage-outer{
+      overflow: inherit;
+      margin-bottom: 70px;
+
+      .owl-stage{
+        .owl-item{
+          a{
+            &.campaign-type{
+              width: 16vw;
+              height: 16vw;
+              padding-top: 3vw;
+              max-width: 200px;
+              max-height: 200px;
+              text-align: center;
+              display: block;
+              color: #ffffff;
+              text-decoration: none;
+              margin: 20px auto;
+              cursor: pointer;
+              @include drop-shadow(0px 2px 5px 0px rgba(0, 0, 0, 0.5));
+              @include border-radius(5px);
+              @include themify($themes) {
+                background-color: themed('secondry-color');
+              }
+
+              @media (min-width: 576px) {
+                padding-top: 2vw;
+              }
+              @media (min-width: 1200px) {
+                padding-top: 20px;
+              }
+
+              &:hover{
+                @include drop-shadow(0px 3px 15px 0px rgba(0, 0, 0, 0.3));
+              }
+
+              !*@media (min-width: 576px) {
+                width: 120px;
+                height: 120px;
+              }
+              @media (min-width: 768px) {
+                width: 160px;
+                height: 160px;
+              }
+              @media (min-width: 992px) {
+                width: 160px;
+                height: 160px;
+              }
+              @media (min-width: 1200px) {
+                width: 200px;
+                height: 200px;
+              }*!
+
+              .icon{
+                width: 10vw;
+                height: 10vw;
+                max-width: 130px;
+                !*max-height: 130px;*!
+                max-height: 90px;
+                margin-left: auto;
+                margin-right: auto;
+                margin-bottom: 0.9vw;
+                @include border-radius(100px);
+                !*@include themify($themes) {
+                  background-color: themed('third-color');
+                }*!
+
+                @media (min-width: 1200px) {
+                  !*width: 130px;
+                  height: 130px;*!
+                  max-width: 150px;
+                  max-height: 110px;
+                  margin-bottom: 15px;
+                }
+
+                i{
+                  font-size: 5vw;
+                  line-height: 10vw;
+
+                  @media (min-width: 1200px) {
+                    line-height: 130px;
+                    font-size: 80px;
+                  }
+                }
+              }
+              &>.title{
+                font-size: 1.5vw;
+
+                @media (min-width: 1200px) {
+                  font-size: 16px;
+                }
+              }
+
+              &.active{
+                @include drop-shadow(0px 1px 3px 0px rgba(0, 0, 0, 0.1));
+                @include themify($themes) {
+                  background-color: themed('primary-color');
+                }
+              }
+
+            }
+
+            &.campaign-type-1{
+              width: 30vw;
+              height: 30vw;
+              padding-top: 3vw;
+              max-width: 200px;
+              max-height: 200px;
+              text-align: center;
+              display: block;
+              color: #ffffff;
+              text-decoration: none;
+              margin: 20px auto;
+              cursor: pointer;
+              @include drop-shadow(0px 2px 5px 0px rgba(0, 0, 0, 0.5));
+              @include border-radius(5px);
+              @include themify($themes) {
+                background-color: themed('secondry-color');
+              }
+
+              @media (min-width: 576px) {
+                padding-top: 2vw;
+                width: 16vw;
+                height: 16vw;
+              }
+              @media (min-width: 1200px) {
+                padding-top: 20px;
+              }
+
+              &:hover{
+                @include drop-shadow(0px 3px 15px 0px rgba(0, 0, 0, 0.3));
+              }
+
+              .icon{
+                width: 23vw;
+                height: 23vw;
+                max-width: 130px;
+                max-height: 130px;
+                margin-left: auto;
+                margin-right: auto;
+                margin-bottom: 0.9vw;
+                @include border-radius(100px);
+                background-color: #ffffff;
+
+                @media (min-width: 576px) {
+                  width: 10vw;
+                  height: 10vw;
+                }
+
+                @media (min-width: 1200px) {
+                  width: 130px;
+                  height: 130px;
+                  margin-bottom: 15px;
+                }
+
+                i{
+                  font-size: 12vw;
+                  line-height: 23vw;
+                  @include themify($themes) {
+                    color: themed('secondry-color');
+                  }
+
+                  @media (min-width: 576px) {
+                    font-size: 5vw;
+                    line-height: 10vw;
+                  }
+
+                  @media (min-width: 1200px) {
+                    line-height: 130px;
+                    font-size: 80px;
+                  }
+                }
+              }
+              &>.title{
+                font-size: 1.5vw;
+
+                @media (min-width: 1200px) {
+                  font-size: 16px;
+                }
+              }
+
+              &.active{
+                @include drop-shadow(0px 1px 3px 0px rgba(0, 0, 0, 0.1));
+                @include themify($themes) {
+                  background-color: themed('primary-color');
+                }
+                i{
+                  @include themify($themes) {
+                    color: themed('primary-color');
+                  }
+                }
+              }
+
+            }
+          }
+
+          .heading{
+            font-size: 24px;
+            @include themify($themes) {
+              color: themed('secondry-color');
+            }
+          }
+
+          .img-thumbnail{
+            width: 100%;
+            max-width: 115px;
+            max-height: 115px;
+          }
+
+        }
+      }
+    }*/
+
+
+    a{
+      &.campaign-type{
+        width: 16vw;
+        height: 16vw;
+        padding-top: 3vw;
+        max-width: 200px;
+        max-height: 200px;
+        text-align: center;
+        display: block;
+        color: #ffffff;
+        text-decoration: none;
+        margin: 20px auto;
+        cursor: pointer;
+        @include drop-shadow(0px 2px 5px 0px rgba(0, 0, 0, 0.5));
+        @include border-radius(5px);
+        @include themify($themes) {
+          background-color: themed('secondry-color');
+        }
+
+        @media (min-width: 576px) {
+          padding-top: 2vw;
+        }
+        @media (min-width: 1200px) {
+          padding-top: 20px;
+        }
+
+        &:hover{
+          @include drop-shadow(0px 3px 15px 0px rgba(0, 0, 0, 0.3));
+        }
+
+        /*@media (min-width: 576px) {
+          width: 120px;
+          height: 120px;
+        }
+        @media (min-width: 768px) {
+          width: 160px;
+          height: 160px;
+        }
+        @media (min-width: 992px) {
+          width: 160px;
+          height: 160px;
+        }
+        @media (min-width: 1200px) {
+          width: 200px;
+          height: 200px;
+        }*/
+
+        .icon{
+          width: 10vw;
+          height: 10vw;
+          max-width: 130px;
+          /*max-height: 130px;*/
+          max-height: 90px;
+          margin-left: auto;
+          margin-right: auto;
+          margin-bottom: 0.9vw;
+          @include border-radius(100px);
+          /*@include themify($themes) {
+            background-color: themed('third-color');
+          }*/
+
+          @media (min-width: 1200px) {
+            /*width: 130px;
+            height: 130px;*/
+            max-width: 150px;
+            max-height: 110px;
+            margin-bottom: 15px;
+          }
+
+          i{
+            font-size: 5vw;
+            line-height: 10vw;
+
+            @media (min-width: 1200px) {
+              line-height: 130px;
+              font-size: 80px;
+            }
+          }
+        }
+        &>.title{
+          font-size: 1.5vw;
+
+          @media (min-width: 1200px) {
+            font-size: 16px;
+          }
+        }
+
+        &.active{
+          @include drop-shadow(0px 1px 3px 0px rgba(0, 0, 0, 0.1));
+          @include themify($themes) {
+            background-color: themed('primary-color');
+          }
+        }
+
+      }
+
+      &.campaign-type-1{
+        width: 30vw;
+        height: 30vw;
+        padding-top: 3vw;
+        max-width: 200px;
+        max-height: 200px;
+        text-align: center;
+        display: block;
+        color: #ffffff;
+        text-decoration: none;
+        margin: 20px auto;
+        cursor: pointer;
+        @include drop-shadow(0px 2px 5px 0px rgba(0, 0, 0, 0.5));
+        @include border-radius(5px);
+        @include themify($themes) {
+          background-color: themed('secondry-color');
+        }
+
+        @media (min-width: 576px) {
+          padding-top: 2vw;
+          width: 16vw;
+          height: 16vw;
+        }
+        @media (min-width: 1200px) {
+          padding-top: 20px;
+        }
+
+        &:hover{
+          @include drop-shadow(0px 3px 15px 0px rgba(0, 0, 0, 0.3));
+        }
+
+        .icon{
+          width: 23vw;
+          height: 23vw;
+          max-width: 130px;
+          max-height: 130px;
+          margin-left: auto;
+          margin-right: auto;
+          margin-bottom: 0.9vw;
+          @include border-radius(100px);
+          background-color: #ffffff;
+
+          @media (min-width: 576px) {
+            width: 10vw;
+            height: 10vw;
+          }
+
+          @media (min-width: 1200px) {
+            width: 130px;
+            height: 130px;
+            margin-bottom: 15px;
+          }
+
+          i{
+            font-size: 12vw;
+            line-height: 23vw;
+            @include themify($themes) {
+              color: themed('secondry-color');
+            }
+
+            @media (min-width: 576px) {
+              font-size: 5vw;
+              line-height: 10vw;
+            }
+
+            @media (min-width: 1200px) {
+              line-height: 130px;
+              font-size: 80px;
+            }
+          }
+        }
+        &>.title{
+          font-size: 1.5vw;
+
+          @media (min-width: 1200px) {
+            font-size: 16px;
+          }
+        }
+
+        &.active{
+          @include drop-shadow(0px 1px 3px 0px rgba(0, 0, 0, 0.1));
+          @include themify($themes) {
+            background-color: themed('primary-color');
+          }
+          i{
+            @include themify($themes) {
+              color: themed('primary-color');
+            }
+          }
+        }
+
+      }
+    }
+
+    .heading{
+      font-size: 24px;
+      @include themify($themes) {
+        color: themed('secondry-color');
+      }
+    }
+
+    .img-thumbnail{
+      width: 100%;
+      max-width: 115px;
+      max-height: 115px;
+    }
+    /*.owl-stage-outer{
+      overflow: inherit;
+      margin-bottom: 70px;
+
+      .owl-stage{
+        .owl-item{
+
+
+        }
+      }
+    }*/
+
+    .owl-nav{
+      margin-top: 20px;
+
+      &>div{
+        color: #ffffff;
+        padding: .375rem 1.25rem;
+        @include border-radius(2px);
+        @include drop-shadow(0px 2px 5px 0px rgba(0, 0, 0, 0.1));
+        &:hover{
+          @include drop-shadow(0px 3px 10px 0px rgba(0, 0, 0, 0.2));
+        }
+        &.disabled{
+          opacity: 0.5;
+          @include drop-shadow(0px 3px 10px 0px rgba(0, 0, 0, 0));
+        }
+      }
+
+      .owl-next{
+        float: right;
+        @include themify($themes) {
+          background-color: themed('secondry-color');
+        }
+      }
+      .owl-prev{
+        float: left;
+        @include themify($themes) {
+          background-color: themed('third-color');
+        }
+      }
+    }
+  }
+}
+/*   New Campaign Stepper  ends  */
+
+/*   My Accounts  */
+.profile-image{
+  width: 100%;
+
+  .account-picture{
+    text-align: center;
+
+    img{
+      width: 100%;
+      max-width: 250px;
+      max-height: 250px;
+      border: solid 5px #e2e2e2;
+      @include border-radius(300px);
+      margin-bottom: 20px;
+      @include drop-shadow(0px 5px 15px 0px rgba(0, 0, 0, 0.1));
+    }
+
+  }
+}
+/*   My Accounts ends  */
+
+/*   Portal Settings  */
+.portal-setting-images{
+  width: 200px;
+  height: 200px;
+  display: block;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+
+  img{
+    max-width: 200px;
+    height: 200px;
+    width: 200px;
+  }
+}
+/*   Portal Settings ends  */
+
+/*   Bulk Mapping   */
+.mapping-arrow{
+  @include themify($themes) {
+    color: themed('secondry-color');
+  }
+}
+.mapping-field{
+  min-width: 200px;
+}
+/*   Bulk Mapping ends  */
+
+
+/*   Date Picker   */
+
+.bootstrap-datetimepicker-widget table td.today:before {
+  @include themify($themes) {
+    border-bottom-color: themed('secondry-color');
+  }
+}
+
+.bootstrap-datetimepicker-widget table td.active, .bootstrap-datetimepicker-widget table td.active:hover {
+  @include themify($themes) {
+    background-color: themed('secondry-color');
+  }
+}
+
+.bootstrap-datetimepicker-widget table td span.active {
+  @include themify($themes) {
+    background-color: themed('secondry-color');
+  }
+}
+
+/*   Date Picker ends  */
+
+/*   Progress bar   */
+.themed-progress{
+  .progress-bar{
+    @include themify($themes) {
+      background-color: themed('secondry-dark');
+    }
+  }
+}
+/*   Progress bar ends   */
+
+/*   Pagination   */
+.pagination{
+  .page-item{
+    /* For Yii v1 */
+
+    &:nth-child(2) {
+      &>a{
+        @include border-radius(5px 0 0 5px);
+      }
+    }
+    &:nth-last-child(2) {
+      &>a{
+        @include border-radius(0 5px 5px 0);
+      }
+    }
+    &>a{
+      position: relative;
+      display: block;
+      padding: .5rem .75rem;
+      margin-left: -1px;
+      line-height: 1.25;
+      background-color: #fff;
+      border: 1px solid #dee2e6;
+      text-decoration: none;
+      @include themify($themes) {
+        color: themed('secondry-color');
+      }
+    }
+    &.selected{
+      &>a{
+        color: #fff;
+        @include themify($themes) {
+          background-color: themed('secondry-color');
+          border-color: themed('secondry-dark');
+        }
+      }
+    }
+    &.hidden{
+      display: none;
+    }
+    /* For Yii v1 ends */
+
+    &.active{
+      .page-link{
+        @include themify($themes) {
+          background-color: themed('secondry-color');
+          border-color: themed('secondry-dark');
+        }
+      }
+    }
+  }
+
+  .first{
+    &.hidden{
+      display: none;
+    }
+  }
+
+  .last{
+    display: none;
+  }
+
+}
+/*   Pagination ends   */
+
+/*   Dropdown menu   */
+.dropdown-menu{
+  .dropdown-item{
+    color: inherit;
+    &:hover, &:focus, &:active{
+      @include themify($themes) {
+        /*background-color: themed('secondry-color') !important;*/
+      }
+    }
+  }
+}
+
+/*   Dropdown menu ends   */
+
+/*   Advanced search   */
+.advanced-search{
+
+  .keyword-select{
+    max-height: 45px;
+  }
+  /*#exclude_keywords_1_chosen, #exclude_keywords_2_chosen{
+    display: none;
+    margin-top: 5px;
+  }*/
+}
+/*   Advanced search ends   */
+
+/*   Map View   */
+
+.map-view{
+  .map-layout{
+    height: 600px;
+    @media (max-width: 768px) {
+      height: 400px;
+    }
+
+    #map{
+      height: 100%;
+    }
+  }
+  .zone-color-lbl{
+    height: 30px;
+    line-height: 30px;
+    float: left;
+  }
+  .zone-colors{
+    list-style: none;
+    float: left;
+    padding: 0px;
+
+    li{
+      display: inline-block;
+      margin-right: 5px;
+
+      .color-box{
+        width: 20px;
+        height: 20px;
+        cursor: pointer;
+        @include border-radius(2px);
+
+        &:hover{
+          @include drop-shadow(0 0 5px 0 rgba(0,0,0,.3) );
+        }
+
+        &.active{
+          @include drop-shadow(inset 0 1px 5px rgba(0,0,0,.7) );
+          @include border-radius(3px);
+        }
+
+        &#blue{
+          background-color: #3f80be;
+        }
+        &#red{
+          background-color: #ec6767;
+        }
+        &#green{
+          background-color: #45be3f;
+        }
+        &#yellow{
+          background-color: #f8ac59;
+        }
+        &#purple{
+          background-color: #903fbe;
+        }
+      }
+    }
+  }
+}
+
+/*   Map View ends   */
+
+
+/*   Event View   */
+.event-map{
+  height: 600px;
+  @media (max-width: 768px) {
+    height: 400px;
+  }
+
+  #event-map{
+    height: 100%;
+  }
+}
+/*   Event View ends   */
+
+
+.hidden-field{
+  display: none;
+}
+.no-border{
+  &.form-control{
+    border: none;
+  }
+}
+.group-bg{
+  background-color: #f4f4f4;
+
+  .input-group-append{
+    @media (max-width: 575px) {
+      margin-left: 0;
+      margin-top: -1px;
+    }
+  }
+}
+#exclude-keywords-1, #exclude-keywords-2{
+  display: none;
+  margin-top: 5px;
+}
+
+/*   Chosen   */
+.chosen-container-multi {
+  .chosen-choices{
+    border: 1px solid #ced4da;
+
+    li{
+      &.search-field{
+        input[type="text"]{
+          height: 35px;
+          color: #495057;
+          font-family: $base-font;
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}
+.chosen-container-active{
+  .chosen-choices{
+    @include drop-shadow(none);
+    border: 1px solid #80bdff;
+  }
+}
+/*   Chosen ends   */
+
+/*   Events   */
+.event-details{
+  .event-title{
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 24px;
+    color: #232323;
+    text-align: center;
+  }
+  .event-time{
+    color: #232323;
+    text-align: center;
+    font-size: 14px;
+    line-height: 14px;
+  }
+  .event-image{
+    width: 100%;
+  }
+  .event-address{
+    font-size: 14px;
+    padding: 10px;
+    text-align: center;
+    color: #232323;
+    background-color: #ebebeb;
+  }
+  .event-description{
+    font-size: 14px;
+    line-height: 22px;
+    color: #737373;
+    text-align: justify;
+  }
+  .event-map{
+    height: 300px;
+
+    #event-map{
+      height: 100%;
+    }
+  }
+}
+/*   Events ends   */
+
+/* New Campaign */
+
+#camp-wizard {
+  .content{
+    @media (max-width: 575px) {
+      height: 450px;
+    }
+    @media (min-width: 576px) {
+      height: 350px;
+    }
+
+    @media (min-width: 768px){
+      height: 400px;
+    }
+
+    @media (min-width: 992px){
+      height: 500px;
+    }
+
+    @media (min-width: 1200px){
+      height: auto;
+    }
+
+  }
+  .steps {
+    .current {
+      a{
+        @include themify($themes) {
+          background-color: themed('secondry-color') !important;
+        }
+      }
+    }
+    .done{
+      a{
+        @include themify($themes) {
+          background-color: themed('secondry-color') !important;
+          opacity: 0.4;
+        }
+      }
+    }
+    ul{
+      li{
+        a{
+          @media (max-width: 768px){
+            text-align: center;
+          }
+          .wizard-label{
+            @media (max-width: 768px){
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .actions{
+    ul{
+      li{
+        &.disabled{
+          a{
+            background-color: #ccc !important;
+          }
+        }
+        a{
+          @include themify($themes) {
+            background-color: themed('secondry-color');
+          }
+        }
+      }
+    }
+  }
+}

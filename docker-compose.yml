@@ -1,0 +1,6 @@
+version: '3'
+services:
+  ke-db-migration:
+    build: .
+    ports:
+      - 80:80

@@ -1,0 +1,263 @@
+.table-wrap{
+  overflow: auto;
+  &>.table{
+    max-width: 99.9999%;
+  }
+
+  .fa-twitter{
+    color: $tw-color;
+  }
+  .fa-facebook{
+    color: $fb-color;
+  }
+  .fa-linkedin{
+    color: $in-color;
+  }
+
+  &.table-custom{
+    th{
+      border: none;
+      font-size: 12px;
+      padding: .75rem .25rem;
+
+      color: #fff;
+      @include themify($themes) {
+        background-color: themed('secondry-color');
+      }
+      &.actions{
+        min-width: 80px;
+      }
+
+      .form-check{
+        .icheckbox_minimal.checked{
+          background-position: -80px 0;
+        }
+      }
+
+      a{
+        color: #fff !important;
+        text-decoration: underline;
+      }
+    }
+    td{
+      border: none;
+      font-size: 12px;
+      padding: .75rem .25rem;
+
+      border-left: 1px solid #fafafa;
+      border-right: 1px solid #fafafa;
+      .badge{
+        font-size: 100%;
+        font-weight: normal;
+
+        &.badge-day{
+          color: #ffffff;
+          @include themify($themes) {
+            background-color: themed('secondry-color');
+          }
+        }
+        &.badge-time{
+          color: #ffffff;
+          @include themify($themes) {
+            background-color: themed('third-color');
+          }
+        }
+      }
+      &.table-subhead{
+        background-color: #fff;
+        font-weight: bold;
+      }
+      &.button-column{
+        text-align: center;
+        a{
+          text-decoration: none;
+
+          &:hover{
+            text-decoration: none;
+          }
+        }
+      }
+    }
+
+    &.table-striped {
+      tbody {
+        tr{
+          &:nth-of-type(2n+1){
+            background-color: #f9f9f9;
+          }
+        }
+      }
+    }
+    &.table-hover{
+      tbody{
+        tr{
+          &:hover{
+            background-color: #f0f0f0;
+          }
+        }
+      }
+    }
+
+    a{
+      margin-left: 3px;
+      margin-right: 3px;
+      display: inline-block;
+      @include themify($themes) {
+        color: themed('primary-color');
+      }
+    }
+
+  }
+
+  .table-permissions{
+    th{
+      border: none;
+      font-size: 16px;
+      padding: .75rem .25rem;
+      @include themify($themes) {
+        background-color: themed('body-bg');
+      }
+
+      &.enable{
+        width: 120px;
+      }
+      label{
+        margin-bottom: 0;
+      }
+    }
+    td{
+      font-size: 12px;
+      padding: .75rem .25rem;
+
+      .badge{
+        font-size: 100%;
+        font-weight: normal;
+      }
+      &.table-subhead{
+        background-color: #fff;
+        font-weight: bold;
+      }
+    }
+    &.table-hover{
+      tbody{
+        tr{
+          &:hover{
+            background-color: #f0f0f0;
+          }
+        }
+      }
+    }
+
+    a{
+      margin-left: 3px;
+      margin-right: 3px;
+      display: inline-block;
+      @include themify($themes) {
+        color: themed('secondry-light');
+      }
+    }
+
+  }
+
+  .profile-pic{
+    img{
+      width: 20px;
+      height: 20px;
+      @include border-radius(50px);
+    }
+  }
+
+  .advanced-search{
+
+    .gender{
+      margin-left: 5px;
+      margin-right: 5px;
+      img{
+        width: 22px;
+        height: 22px;
+      }
+    }
+    .social{
+      .fa-angle-right{
+        @include themify($themes) {
+          color: themed('secondry-color');
+        }
+      }
+    }
+
+    th{
+      &:nth-child(1){
+        width: 30px;
+      }
+      &:nth-child(2){
+        min-width: 85px;
+      }
+      &:nth-child(3){
+        min-width: 90px;
+      }
+      &:nth-child(4){
+        min-width: 90px;
+      }
+      &:nth-child(5){
+        min-width: 100px;
+      }
+      &:nth-child(6){
+        min-width: 100px;
+      }
+      &:nth-child(7){
+
+      }
+      &:nth-child(8){
+        min-width: 80px;
+      }
+      &:nth-child(9){
+
+      }
+      &:nth-child(10){
+
+      }
+      &:nth-child(11){
+
+      }
+
+    }
+
+    td{
+      overflow: hidden;
+
+    }
+
+  }
+
+  .saved-search{
+    &.actions{
+      width: 170px !important;
+      min-width: 170px !important;
+    }
+  }
+
+  .table-mapping{
+    td{
+      border: none;
+    }
+  }
+
+}
+
+.edit-keyword{
+  .chosen-container-multi{
+    .chosen-choices{
+      height: 115px;
+    }
+  }
+}
+
+.results-count{
+  font-size: 12px;
+  margin-bottom: 10px;
+  @include themify($themes) {
+    color: themed('primary-light');
+  }
+}
+
+.grid-view-loading { background:url(../img/loading.gif) no-repeat; }

@@ -1,0 +1,128 @@
+#ui-datepicker-div
+{
+    z-index: 1000!important;
+}
+.modal-footer
+{
+    padding-top: 30px;
+}
+.break-words {
+    word-wrap: break-word;
+    width: 50px;
+}
+
+.exclude-hide, .exclude-keyword, .exclude-keyword2 {
+    display: none;
+}
+
+.multiselect {
+    margin-bottom: 5px;
+    color: #555;
+    background: #ffffff;
+    border: 1px solid #ced4da;
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+    width: 100%;
+    overflow: hidden;
+}
+
+.multiselect-container li a {
+    color: black !important;
+}
+
+.btn-small {
+    margin-bottom: 2.5px;
+}
+
+#bulk-edit, #bulk-delete, #bulk-export, #export-address {
+    color: white !important;
+}
+
+.btn-group {
+    width: 100%;
+}
+
+.select2-container .select2-search--inline {
+    height: 40px;
+}
+
+.select2-search__field {
+    height: 40px !important;
+}
+
+.select2-selection__choice {
+    padding: 4px 6px !important;
+}
+
+#user-searchtype, #user-searchtype2 {
+    height: calc(2.25rem + 6px) !important;
+}
+.mapouter {
+    overflow: hidden;
+    height: 400px;
+    width: 100%;
+}
+
+.gmap_canvas {
+    background: none !important;
+    height: 400px;
+    width: 100%;
+}
+.app-body .table-wrap {
+    overflow: auto;
+    min-height: 200px;
+}
+
+#legend {
+    background: white;
+    padding: 10px;
+}
+.exclude-hide, .exclude-keyword{
+    display: none;
+}
+.select2-container--krajee .select2-selection--multiple .select2-search--inline .select2-search__field {
+    margin-top: 5px;
+    width: unset!important;
+}
+.field-user-searchtype
+{
+    width: 100%;
+}
+.map-view-form .selectize-dropdown {
+    z-index: 10000;
+}
+.loader {
+    border: 16px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 16px solid #2f4050;
+    width: 120px;
+    height: 120px;
+    -webkit-animation: spin 2s linear infinite; /* Safari */
+    animation: spin 2s linear infinite;
+    margin: 10% 10% 10% 40%;
+}
+
+/* Safari */
+@-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.modal-body {
+    position: unset;
+    flex: unset;
+    padding: unset;
+}
+#team-zone-form a
+{
+    color: #fff !important;
+}
+
+
+
+
+

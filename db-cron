@@ -1,0 +1,2 @@
+*/1 * * * * php /app/web/console.php mass-message-send-supervisor > dev/null
+0 */4 * * * php /app/web/console.php long-lat-scan > dev/null

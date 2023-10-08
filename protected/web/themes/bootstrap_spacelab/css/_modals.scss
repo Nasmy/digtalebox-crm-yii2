@@ -1,0 +1,33 @@
+.modal{
+  overflow-y:auto;
+
+  .modal-header{
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
+  .modal-footer{
+    border: none;
+    padding-top: 0.25rem;
+  }
+  .tite-desc{
+    font-size: 12px;
+  }
+  .notes{
+    font-size: 12px;
+  }
+  .resource-details{
+    img{
+      max-height: 230px;
+    }
+    .resource-video{
+      iframe{
+        width: 100%;
+      }
+    }
+  }
+}
+
+.modal-xl{
+  width: 90%;
+  max-width: 1400px;
+}

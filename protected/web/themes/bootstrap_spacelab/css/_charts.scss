@@ -1,0 +1,24 @@
+.highcharts-root{
+  font-family: $base-font !important;
+}
+
+.highcharts-container{
+  .highcharts-data-label{
+    span{
+      text-shadow: 0 0 2px rgba(0, 0, 0, 0.9);
+      font-family: $base-font !important;
+    }
+  }
+}
+
+#chart-age{
+  .highcharts-container{
+    .highcharts-series-1{
+      .highcharts-data-label{
+        span{
+          text-shadow: none;
+        }
+      }
+    }
+  }
+}

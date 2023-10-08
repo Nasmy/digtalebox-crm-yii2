@@ -1,0 +1,94 @@
+.ui-corner-all{
+  @include border-radius(1px);
+}
+
+.ui-widget-header{
+  background: none;
+  border: none;
+}
+
+.ui-datepicker-month{
+  @include themify($themes) {
+    color: themed('primary-color');
+  }
+}
+.ui-datepicker-year{
+  border: none;
+  @include themify($themes) {
+    background-color: themed('body-bg');
+  }
+}
+
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default{
+  background: none;
+  border: none;
+  @include themify($themes) {
+    background-color: themed('body-bg');
+  }
+}
+
+.ui-state-default{
+  &:hover{
+    @include themify($themes) {
+      background-color: themed('primary-light');
+    }
+  }
+}
+
+.ui-state-active{
+  color: #000!important;
+  @include themify($themes) {
+    background-color: themed('secondry-color')!important;
+  }
+}
+
+.ui-datepicker-calendar{
+  th{
+    &>span{
+      @include themify($themes) {
+        color: themed('secondry-color');
+      }
+    }
+  }
+}
+
+.ui-datepicker-prev, .ui-datepicker-next{
+  &>.ui-icon{
+    background: none;
+
+    &:before{
+      font-family: FontAwesome;
+      position: absolute;
+      left: 5px;
+      top: -4px;
+      z-index: 100;
+      width: 15px;
+      height: 15px;
+      text-indent: 0;
+      @include themify($themes) {
+        color: themed('secondry-color');
+      }
+    }
+  }
+  &:hover{
+    background: none;
+    @include themify($themes) {
+      background-color: themed('body-bg');
+    }
+  }
+}
+.ui-datepicker-prev{
+  &>span{
+    &:before{
+      content: "\f104";
+    }
+  }
+
+}
+.ui-datepicker-next{
+  &>span{
+    &:before{
+      content: "\f105";
+    }
+  }
+}

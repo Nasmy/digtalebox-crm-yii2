@@ -1,0 +1,129 @@
+.custom-file-label{
+  min-height: 40px;
+  line-height: 1.6rem;
+
+  &::after{
+    min-height: 38px;
+    border-radius: 0;
+    line-height: 1.6rem;
+  }
+}
+.form-feild-info{
+  font-size: 11px;
+  margin-top: 3px;
+  margin-bottom: 5px;
+
+  @include themify($themes) {
+    color: themed('primary-light');
+  }
+}
+
+.text-editor{
+  height: 300px;
+}
+
+.form-row-separated{
+  border-bottom: solid 1px #e9ecef;
+}
+
+#message-template-email-subject{
+  input{
+    min-height: 10px !important;
+    height: 10px;
+  }
+}
+
+select{
+  -webkit-appearance:none;
+  -moz-appearance:none;
+  -ms-appearance:none;
+  background-image: url("../img/down-arrow.svg");
+  background-repeat: no-repeat;
+  background-position: right 15px center;
+  background-size: 15px;
+
+  option{
+    &::selection{
+      @include themify($themes) {
+        background-color: themed('primary-light');
+      }
+    }
+  }
+}
+
+.form-control{
+  &.normal-padding{
+    padding: 0.3rem;
+  }
+}
+
+.form-control-selectize{
+  &>.selectize-input{
+    @extend %form-control-extend;
+    line-height: 26px;
+    padding: .375rem .75rem;
+
+    &>div{
+      border-radius: 2px;
+      padding: 0px 10px;
+
+      &.active{
+        @include themify($themes) {
+          background-color: themed('secondry-color');
+        }
+      }
+    }
+    &.focus{
+      @include drop-shadow(none);
+    }
+  }
+  &>.selectize-dropdown{
+    @include border-radius(2px);
+  }
+}
+
+.custom-select{
+  height: 40px;
+}
+
+.multi-select-dropdown {
+  display: block;
+  width: 100%;
+  background-clip: padding-box;
+  .btn-group{
+    width: 100%;
+
+    .multiselect {
+      text-align: left;
+      width: 100%;
+      border: 1px solid #ced4da;
+      background-color: #fff;
+      color: #495057;
+
+      background-image: url("../img/down-arrow.svg");
+      background-repeat: no-repeat;
+      background-position: right 15px center;
+      background-size: 15px;
+
+      &.dropdown-toggle::after{
+        display: none;
+      }
+
+      &:hover{
+        box-shadow: none;
+      }
+    }
+  }
+
+  .multiselect-container{
+    width: 100%;
+    border-radius: 0px;
+  }
+}
+
+.token-input-list-facebook {
+  border-radius: 0;
+  width: 100%;
+  min-height: 40px !important;
+  line-height: 30px;
+}

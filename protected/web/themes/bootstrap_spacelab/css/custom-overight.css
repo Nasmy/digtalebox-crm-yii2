@@ -1,0 +1,28 @@
+.help-block-error, .has-error .help-block {
+    color: firebrick !important;
+}
+
+table.kv-grid-table th {
+    background: transparent !important;
+    font-size: inherit !important;
+    color: black !important;
+}
+
+table.kv-grid-table td, table.kv-grid-table th {
+    padding: .75rem !important;
+    vertical-align: top;
+    border-top: 1px solid #dee2e6 !important;
+}
+
+
+.grid-bold{
+ font-size: 14px !important;
+}
+
+.table-responsive.kv-grid-container {
+    overflow: hidden !important;
+}
+
+/*.fade.in{*/
+/*    opacity:1;*/
+/*}*/
